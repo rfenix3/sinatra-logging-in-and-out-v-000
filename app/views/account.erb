@@ -10,8 +10,8 @@
       <p>Username: <%= Helpers.current_user(@user).name%> </p>
       <p>Balance: <%= Helpers.current_user(@user).balance.to_s%> </p>
     <% else %>
-      <p><a href = 
-      
+        <h1>You Must <a href="/">Log In</a> to View Your Balance</h1>
+    <% end %>
 
   </body>
 </html>
