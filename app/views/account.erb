@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    <% if Helpers.is_logged_in?(session_hash) %>
-    <p>Username: <%= @users.username%> </p>
-    <p>Balance: <%= @users.balance_to_s%> </p>
+    <% if Helpers.is_logged_in?(@user) %>
+    <p>Username: <%= Helpers.current_user(@user).name%> </p>
+    <p>Balance: <%= Helpers.current_user(@user).balance.to_s%> </p> 
 
   </body>
 </html>
